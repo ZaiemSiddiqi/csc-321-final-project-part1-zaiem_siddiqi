@@ -177,7 +177,7 @@ public class BufferPool {
      */
     @VisibleForTest
     public void flushAllPage() {
-        for (Map.Entry<PageID, Page> entry : pool.entrySet(1000)) {
+        for (Map.Entry<PageID, Page> entry : pool.entrySet()) {
             flushPage(entry.getValue());
         }
     }
