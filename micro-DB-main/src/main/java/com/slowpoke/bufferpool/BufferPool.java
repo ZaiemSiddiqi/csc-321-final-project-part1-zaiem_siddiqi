@@ -177,8 +177,12 @@ public class BufferPool {
      */
     @VisibleForTest
     public void flushAllPage() {
-        for (Map.Entry<PageID, Page> entry : pool.entrySet()) {
+        for (Map.Entry<PageID, Page> entry : pool.entrySet(1000)) {
             flushPage(entry.getValue());
         }
     }
 }
+
+
+
+//ZAIEM SIDDIQI
